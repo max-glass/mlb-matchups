@@ -1,0 +1,13 @@
+{
+  "description": "Opportunity rank uses estimated value and uncertainty. Win probability is not a term. Missing no-vig prices drop that weight and the remaining weights are renormalized.",
+  "conservative_roi": 0.45,
+  "probability_edge": 0.20,
+  "no_vig_edge": 0.10,
+  "data_support": 0.15,
+  "uncertainty_penalty": 0.10,
+  "stale_after_minutes": 180,
+  "minimum_data_support": 0.35,
+  "strong_candidate_min_support": 0.70,
+  "strong_candidate_min_p_positive_ev": 0.70,
+  "watchlist_p_positive_ev": 0.60
+}

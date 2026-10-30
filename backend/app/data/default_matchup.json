@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-19",
+  "away_team_id": 114,
+  "home_team_id": 139,
+  "note": "Acceptance case. Home and away follow the scheduled game: Cleveland Guardians at Tampa Bay Rays, ALCS Game 6, Tropicana Field. The model does not hardcode this matchup."
+}

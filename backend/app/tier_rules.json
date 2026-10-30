@@ -1,0 +1,60 @@
+{
+  "rule_version": "value-tiers-1",
+  "description": "Tiers require positive expected value at the quoted payout, evidence, and a variance band. Win probability is not a qualification rule. Long Shot additionally requires a lower probability and a long price, so a short-priced favorite cannot be filed there to fill the column.",
+  "stale_after_minutes": 360,
+  "support_gap_cap": 0.04,
+  "uncertainty_z": 1.0,
+  "min_p_positive_ev": {
+    "conservative": 0.8,
+    "balanced": 0.7,
+    "aggressive": 0.65,
+    "long_shot": 0.62
+  },
+  "min_data_support": {
+    "conservative": 0.7,
+    "balanced": 0.55,
+    "aggressive": 0.45,
+    "long_shot": 0.45
+  },
+  "max_unit_stdev": {
+    "conservative": 0.95,
+    "balanced": 1.35,
+    "aggressive": 1.8,
+    "long_shot": 4.0
+  },
+  "max_decimal_odds": {
+    "conservative": 2.4,
+    "balanced": 3.2,
+    "aggressive": 4.5,
+    "long_shot": 25.0
+  },
+  "max_loss_probability": {
+    "conservative": 0.48,
+    "balanced": 0.62,
+    "aggressive": 0.8,
+    "long_shot": 0.9
+  },
+  "long_shot_max_win_probability": 0.4,
+  "long_shot_min_decimal_odds": 3.0,
+  "require_conservative_edge_for": ["conservative"],
+  "kelly_fraction": {
+    "conservative": 0.15,
+    "balanced": 0.25,
+    "aggressive": 0.3,
+    "long_shot": 0.1
+  },
+  "max_bankroll_fraction": {
+    "conservative": 0.01,
+    "balanced": 0.015,
+    "aggressive": 0.02,
+    "long_shot": 0.005
+  },
+  "correlation_stake_multiplier": 0.6,
+  "profile_tiers": {
+    "conservative": ["conservative"],
+    "balanced": ["conservative", "balanced"],
+    "aggressive": ["conservative", "balanced", "aggressive", "long_shot"]
+  },
+  "default_unit_fraction_of_bankroll": 0.01,
+  "notes": "Monte Carlo standard error is the sampling error of the simulation frequency. The data-support gap is a configured allowance, not a calibrated confidence interval. Probability that expected return is positive uses a normal approximation around the simulation frequency only."
+}
